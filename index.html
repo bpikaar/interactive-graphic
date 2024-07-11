@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafiek App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/versions/bulma-no-dark-mode.min.css">
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+
+        #controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section" id="controls">
+        <h1>Interactive Graphic</h1>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <br>
+        <button id="previous-data" class="button is-info">Load previous data points</button>
+        <br>
+        <br>
+        <button id="clear-axis" class="button is-info">Clear Axis</button>
+        <button id="clear-data" class="button is-info">Clear Data</button>
+
+        <div id="x-axis-container" class="field has-addons" style="position:absolute; left:350px; top: 642px;">
+            <p class="control">
+                <input class="input is-small" id="x-axis" type="text" placeholder="X-as">
+            </p>
+            <p class="control">
+                <button class="button is-static is-small">
+                    X-axis
+                </button>
+            </p>
+        </div>
+
+        <div id="y-axis-container" class="field has-addons" style="position:absolute; left:60px; top: 93px;">
+            <p class="control">
+                <input class="input is-small" id="y-axis" type="text" placeholder="Y-as">
+            </p>
+            <p class="control">
+                <button class="button is-static is-small">
+                    Y-axis
+                </button>
+            </p>
+        </div>
+    </section>
+
+    <script defer type="module" src="app.js"></script>
+</body>
+
+</html>
